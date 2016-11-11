@@ -1,10 +1,24 @@
-void Overlay() {
+float[] Overlay() {
   //VARIABLES TO CONTROL OVERLAY DIMENSIONS
   float lCol=(width*0.35);//variable for width of left Column
   float tRow=(height*0.1);//variable for height of top Row
   float rCol=(width*0.2);//variable for width of right Column
   float bRow=(height*0.5);//variable for height of bottom Row
-
+  
+  //VARABLES FOR CENTER/SIZE OF WINDOW
+  float centerX=((width-(lCol+rCol))/2)+lCol;
+  float centerY=((height-(tRow+bRow))/2)+tRow;
+  float windowWidth=width-(lCol+rCol);
+  float windowHeight=height-(tRow+bRow);
+  //println(centerX);  
+  
+  //ARRAY TO HOLD CENTER/SIZE VARIABLES TO BE PASSED BACK
+  float[] windowCo= new float[4]; 
+  windowCo[0]=centerX;
+  windowCo[1]=centerY;
+  windowCo[2]=windowWidth;
+  windowCo[3]=windowHeight;
+  
   noStroke();
   fill(55);
 
@@ -23,4 +37,5 @@ void Overlay() {
   for (int i=0; i<bCount; i++) {
     rect(5, 5+i*spacing, spacing-5, spacing-5, rr, rr, rr, rr);
   }
+  return windowCo;
 }
