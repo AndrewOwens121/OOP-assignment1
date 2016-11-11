@@ -37,5 +37,14 @@ float[] Overlay() {
   for (int i=0; i<bCount; i++) {
     rect(5, 5+i*spacing, spacing-5, spacing-5, rr, rr, rr, rr);
   }
+  //WINDOW BORDER
+  stroke(0);
+  strokeWeight(5);
+  noFill();
+  rect(centerX-(windowWidth/2)-3,centerY-(windowHeight/2)-3,windowWidth+5,windowHeight+5,20,20,20,20);
+  strokeWeight(1);
+  
+  
+  
   return windowCo;
 }
