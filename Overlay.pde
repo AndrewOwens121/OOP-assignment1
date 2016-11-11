@@ -48,6 +48,13 @@ float[] Overlay() {
   rect(centerX-(windowWidth/2)-3, centerY-(windowHeight/2)-3, windowWidth+5, windowHeight+5, 20, 20, 20, 20);
   strokeWeight(1);
 
+  //HEADER "SONAR-DEFENCE-SYSTEM"
+  PFont font;
+  font = loadFont("DefconZero3DItalic-48.vlw");
+  textFont(font, 36);
+  fill(255);
+  String Header = "SONAR_DEFENCE_SYSTEM";
+  text(Header, lCol-200, 50);
 
 
   return windowCo;
