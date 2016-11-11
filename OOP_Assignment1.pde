@@ -13,7 +13,7 @@ void setup() {
   textFont(font, 36);
   //CLASS INITIALIZE
   speedSlider = new ControlP5(this);
-  //speedSlider.addSlider("SonarSpeed", 0.5, 2.5, 1, 400, 525, 275, 30);
+  speedSlider.addSlider("SonarSpeed", 0.5, 2.5, 1, 400, 525, 275, 30);
 }
 float linewidth=0;
 float line=0;
