@@ -3,15 +3,16 @@ void setup() {
   background(0);
   size(800, 600);
 }
-
+int speed=0;
 void draw() {
-  Overlay();
-  float[] windowCoordinates = Overlay();//Overlay Method passes back float array containing coordinates of window
-  stroke(255,0,0);
   
-  //rect(460-180,180-120,360,240);//rect centerX-(windowwidth/2) , center Y -(windowHeight/2)
-  line(460,0,460,height);
-  line(0,180,width,180);
+  float[] windowCoordinates = Overlay();//Overlay Method passes back float array containing coordinates of window
+  sonar(windowCoordinates);
+  Overlay();
+  stroke(255,0,0);
+  //WINDOW CENTERPOINT LINES
+  //line(windowCoordinates[0],0,windowCoordinates[0],height);
+  //line(0,windowCoordinates[1],width,windowCoordinates[1]);
   println(windowCoordinates);
  
 }
