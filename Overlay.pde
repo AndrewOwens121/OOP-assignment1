@@ -1,9 +1,9 @@
 float[] Overlay() {
   //VARIABLES TO CONTROL OVERLAY DIMENSIONS
   float lCol=(width*0.5);//variable for width of left Column
-  float tRow=(height*0.2);//variable for height of top Row
+  float tRow=(height*0.15);//variable for height of top Row
   float rCol=(width*0.1);//variable for width of right Column
-  float bRow=(height*0.1);//variable for height of bottom Row
+  float bRow=(height*0.15);//variable for height of bottom Row
 
   //VARABLES FOR CENTER/SIZE OF WINDOW
   float centerX=((width-(lCol+rCol))/2)+lCol;
@@ -11,6 +11,9 @@ float[] Overlay() {
   float windowWidth=width-(lCol+rCol);
   float windowHeight=height-(tRow+bRow);
   //println(centerX);  
+  //VARIABLE FOR SLIDER COORDINATES
+  float sliderX = centerX-(windowWidth/2);
+  //println(sliderX);
 
   //ARRAY TO HOLD CENTER/SIZE VARIABLES TO BE PASSED BACK
   float[] windowCo= new float[5]; 
@@ -18,11 +21,7 @@ float[] Overlay() {
   windowCo[1]=centerY;
   windowCo[2]=windowWidth;
   windowCo[3]=windowHeight;
-  windowCo[4]=speed;
-
-
-
-
+  windowCo[4]=SonarSpeed;
 
   //DRAWS OVERLAY
   noStroke();
@@ -49,12 +48,15 @@ float[] Overlay() {
   strokeWeight(1);
 
   //HEADER "SONAR-DEFENCE-SYSTEM"
-  PFont font;
-  font = loadFont("DefconZero3DItalic-48.vlw");
-  textFont(font, 36);
+  
   fill(255);
   String Header = "SONAR_DEFENCE_SYSTEM";
   text(Header, lCol-200, 50);
+
+  //SONAR SPEED CONTROL SLIDER
+  //Slider s = speedSlider.addSlider("SonarSpeed",0,255,100,10,10,100,10);
+  //println(s);
+
 
 
   return windowCo;
