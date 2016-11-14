@@ -49,21 +49,21 @@ float[] Overlay() {
   fill(85,85,85,85);
   ellipse(width-rCol/2, rCol/2, 35, 35);//top right
   ellipse(width-rCol/2, height-rCol/2, 35, 35);//bottom right
-  ellipse(spacing+15+rCol/2, height-rCol/2, 35, 35);//bottom left
-  ellipse(spacing+15+rCol/2, rCol/2, 35, 35);//top left
+  ellipse(lCol*0.35, height-rCol/2, 35, 35);//bottom left
+  ellipse(lCol*0.35, rCol/2, 35, 35);//top left
 
   fill(70,70,70);
   ellipse(width-rCol/2, rCol/2, 30, 30);//top right
   ellipse(width-rCol/2, height-rCol/2, 30, 30);//bottom right
-  ellipse(spacing+15+rCol/2, height-rCol/2, 30, 30);//bottom left
-  ellipse(spacing+15+rCol/2, rCol/2, 30, 30);//top left
+  ellipse(lCol*0.35, height-rCol/2, 30, 30);//bottom left
+  ellipse(lCol*0.35, rCol/2, 30, 30);//top left
  
   stroke(20,20,20,120);
   strokeWeight(3);
   line(width-rCol/2-8, rCol/2-8,width-rCol/2+8, rCol/2+8);//top right
   line(width-rCol/2-8, height-rCol/2-8,width-rCol/2+8, height-rCol/2+8);//bottom right
-  line(spacing+15+rCol/2-8, height-rCol/2-8,spacing+15+rCol/2+8, height-rCol/2+8);//bottom left
-  line(spacing+15+rCol/2-8, rCol/2-8,spacing+15+rCol/2+8, rCol/2+8);//top left
+  line(lCol*0.35-8, height-rCol/2-8,lCol*0.35+8, height-rCol/2+8);//bottom left
+  line(lCol*0.35-8, rCol/2-8,lCol*0.35+8, rCol/2+8);//top left
   
   return windowCo;
 }

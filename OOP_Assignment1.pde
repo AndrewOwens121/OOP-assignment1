@@ -50,11 +50,9 @@ float Speed=1;
 
 void draw() {
   //println(windowCoordinates);
-  //println(frameRate);
-  windowCoordinates = Overlay();//Overlay Method passes back float array containing coordinates of window
-  
+  println(frameRate);
+  windowCoordinates = Overlay();//Overlay Method passes back float array containing coordinates of window 
   sonar(windowCoordinates);
-  test(windowCoordinates);
   Overlay();
   buttons(windowCoordinates);
 

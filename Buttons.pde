@@ -7,7 +7,7 @@ void buttons(float[] x) {
   //HEADER "SONAR-DEFENCE-SYSTEM"
   fill(255);
   String Header = "SONAR_DEFENCE_SYSTEM";
-  text(Header, x[5]-240, 50);
+  text(Header, x[5]-200, 50);
 
   //LED's
   //textFont(font1);
