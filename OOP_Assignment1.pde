@@ -2,11 +2,16 @@
 import controlP5.*;
 //CLASS DECLARE
 ControlP5 speedSlider;
+//ARRAYLIST DECLARATION
+ArrayList<Ship> ship_arraylist = new ArrayList<Ship>();
+Table table;
 
 void setup() {
   frameRate(60);
   background(0);
   size(800, 600);
+  //ARRAYLIST INITIALIZE
+  ship_arraylist = new ArrayList<Ship>();
   //FONT
   PFont font;
   PFont font1;
