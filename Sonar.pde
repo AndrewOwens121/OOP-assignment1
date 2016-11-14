@@ -1,8 +1,9 @@
 void sonar(float[] x) {//FUNCTION TAKES IN FLOAT ARRAY CONTAINING WINDOW COORDINATES
   background(0);
 
-  //GRID
+ 
   pushMatrix();
+   //GRID
   translate(x[0]-x[2]/2, x[1]-x[3]/2+5); 
   stroke(100, 200, 200, 30);
 
@@ -14,6 +15,10 @@ void sonar(float[] x) {//FUNCTION TAKES IN FLOAT ARRAY CONTAINING WINDOW COORDIN
     //Vertical lines
     line(i, 0, i, 600);
   }
+  
+  //SHIP LOCATIONS
+  stroke(255,0,0);
+  //rect(0,0,x[2],x[3]);
   popMatrix();
 
   //MOVE ORIGIN TO CENTER OF WINDOW AND ROTATE SONAR

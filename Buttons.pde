@@ -32,11 +32,11 @@ void buttons(float[] x) {
   for (int i=0; i<bCount; i++) {
     rect(5, 5+i*spacing, spacing-5, spacing-5, rr, rr, rr, rr);
   }
-int i;
-  for (i=0; i<bCount; i++) {
-    if (mouseX >= 0 && mouseY>=0 && mouseX <= spacing+spacing*i && mouseY <= spacing+spacing*i) {
-      rect(50, 50+spacing*i, 50, 50);
-      println(i);
-    }
-  }
+//int i;
+//  for (i=0; i<bCount; i++) {
+//    if (mouseX >= 0 && mouseY>=0 && mouseX <= spacing+spacing*i && mouseY <= spacing+spacing*i) {
+//      rect(50, 50+spacing*i, 50, 50);
+//      println(i);
+//    }
+//  }
 }

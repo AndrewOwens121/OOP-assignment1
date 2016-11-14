@@ -1,10 +1,10 @@
 float[] Overlay() {
 
   //VARIABLES TO CONTROL OVERLAY DIMENSIONS
-  float lCol=(width*0.5);//variable for width of left Column
+  float lCol=(width*0.45);//variable for width of left Column
   float tRow=(height*0.15);//variable for height of top Row
-  float rCol=(width*0.1);//variable for width of right Column
-  float bRow=(height*0.15);//variable for height of bottom Row
+  float rCol=(width*0.075);//variable for width of right Column
+  float bRow=(height*0.2);//variable for height of bottom Row
 
   //VARABLES FOR CENTER/SIZE OF WINDOW
   float centerX=((width-(lCol+rCol))/2)+lCol;
