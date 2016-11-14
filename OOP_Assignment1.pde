@@ -9,26 +9,38 @@ void setup() {
   size(800, 600);
   //FONT
   PFont font;
+  PFont font1;
+  font1 = createFont("Georgia", 8);
   font = loadFont("DefconZero3DItalic-48.vlw");
   textFont(font, 36);
   //CLASS INITIALIZE
   speedSlider = new ControlP5(this);
-  speedSlider.addSlider("SonarSpeed", 0.5, 2.5, 1, 400, 525, 275, 30);
+  speedSlider.addSlider("SonarSpeed_MHz", 0.5, 2.5, 1, 400, 525, 275, 30)
+  .setColorForeground(color(0, 255, 255,55))
+  .setColorBackground(color(80, 125, 225,55));
 }
+//VARIABLES
+int bCount=7;//number of Buttons
+int spacing = height/bCount-(bCount/10);
 float linewidth=0;
 float line=0;
 float[] windowCoordinates;
-float SonarSpeed=1.1;
+float SonarSpeed_MHz=1;
 float Speed=1;
-//int speed=0;
-void draw() {
+//windowCoordinates[9]=4;
 
-  println(windowCoordinates);
-  //println(s);
+
+
+
+void draw() {
+  //println(windowCoordinates);
+  //println(frameRate);
   // Overlay();
   windowCoordinates = Overlay();//Overlay Method passes back float array containing coordinates of window
   sonar(windowCoordinates);
   Overlay();
+
+  buttons(windowCoordinates);
 
   stroke(255, 0, 0);
   //WINDOW CENTERPOINT LINES

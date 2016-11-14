@@ -43,7 +43,7 @@ void sonar(float[] x) {//FUNCTION TAKES IN FLOAT ARRAY CONTAINING WINDOW COORDIN
   line(linewidth*-1, line, linewidth, line);
   line+=-2;
   linewidth+=0.65;
-  if (line <= -220)
+  if (line <= -240)
   {
     line=0;
     linewidth=0;
@@ -53,10 +53,10 @@ void sonar(float[] x) {//FUNCTION TAKES IN FLOAT ARRAY CONTAINING WINDOW COORDIN
   popMatrix();
 
 
-  if (SonarSpeed >= 359) {
-    SonarSpeed=0;
+  if (SonarSpeed_MHz >= 359) {
+    SonarSpeed_MHz=0;
   } else {
-    Speed= Speed+SonarSpeed;
+    Speed= Speed+SonarSpeed_MHz;
   }//increments rotation/scanning speed
 
   //}

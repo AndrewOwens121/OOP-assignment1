@@ -1,4 +1,5 @@
 float[] Overlay() {
+
   //VARIABLES TO CONTROL OVERLAY DIMENSIONS
   float lCol=(width*0.5);//variable for width of left Column
   float tRow=(height*0.15);//variable for height of top Row
@@ -16,12 +17,16 @@ float[] Overlay() {
   //println(sliderX);
 
   //ARRAY TO HOLD CENTER/SIZE VARIABLES TO BE PASSED BACK
-  float[] windowCo= new float[5]; 
+  float[] windowCo= new float[9]; 
   windowCo[0]=centerX;
   windowCo[1]=centerY;
   windowCo[2]=windowWidth;
   windowCo[3]=windowHeight;
-  windowCo[4]=SonarSpeed;
+  windowCo[4]=SonarSpeed_MHz;
+  windowCo[5]=lCol;
+  windowCo[6]=tRow;
+  windowCo[7]=rCol;
+  windowCo[8]=bRow;
 
   //DRAWS OVERLAY
   noStroke();
@@ -31,15 +36,7 @@ float[] Overlay() {
   rect(width-rCol, tRow, rCol, height-(bRow+tRow));//right Column
   rect(lCol, height-bRow, width-(lCol), bRow);//bottom Row
 
-  //LEFT COLUMN BUTTONS
-  int bCount=7;//number of Buttons
-  int spacing = height/bCount-(bCount/10);
-  int rr=5;//rectRadius - how curved the buttons edges are
-  fill(75);
-  noStroke();
-  for (int i=0; i<bCount; i++) {
-    rect(5, 5+i*spacing, spacing-5, spacing-5, rr, rr, rr, rr);
-  }
+  
   //WINDOW BORDER
   stroke(0);
   strokeWeight(5);
@@ -47,17 +44,26 @@ float[] Overlay() {
   rect(centerX-(windowWidth/2)-3, centerY-(windowHeight/2)-3, windowWidth+5, windowHeight+5, 20, 20, 20, 20);
   strokeWeight(1);
 
-  //HEADER "SONAR-DEFENCE-SYSTEM"
+  //SCREWS
+  noStroke();
+  fill(85,85,85,85);
+  ellipse(width-rCol/2, rCol/2, 35, 35);//top right
+  ellipse(width-rCol/2, height-rCol/2, 35, 35);//bottom right
+  ellipse(spacing+15+rCol/2, height-rCol/2, 35, 35);//bottom left
+  ellipse(spacing+15+rCol/2, rCol/2, 35, 35);//top left
+
+  fill(70,70,70);
+  ellipse(width-rCol/2, rCol/2, 30, 30);//top right
+  ellipse(width-rCol/2, height-rCol/2, 30, 30);//bottom right
+  ellipse(spacing+15+rCol/2, height-rCol/2, 30, 30);//bottom left
+  ellipse(spacing+15+rCol/2, rCol/2, 30, 30);//top left
+ 
+  stroke(20,20,20,120);
+  strokeWeight(3);
+  line(width-rCol/2-8, rCol/2-8,width-rCol/2+8, rCol/2+8);//top right
+  line(width-rCol/2-8, height-rCol/2-8,width-rCol/2+8, height-rCol/2+8);//bottom right
+  line(spacing+15+rCol/2-8, height-rCol/2-8,spacing+15+rCol/2+8, height-rCol/2+8);//bottom left
+  line(spacing+15+rCol/2-8, rCol/2-8,spacing+15+rCol/2+8, rCol/2+8);//top left
   
-  fill(255);
-  String Header = "SONAR_DEFENCE_SYSTEM";
-  text(Header, lCol-200, 50);
-
-  //SONAR SPEED CONTROL SLIDER
-  //Slider s = speedSlider.addSlider("SonarSpeed",0,255,100,10,10,100,10);
-  //println(s);
-
-
-
   return windowCo;
 }
