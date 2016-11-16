@@ -17,13 +17,6 @@ void setup() {
   //ARRAYLIST INITIALIZE
   //ship_arraylist = new ArrayList<Ship>();
 
-  //FONT
-  PFont font;
-  PFont font1;
-  font1 = createFont("Georgia", 8);
-  font = loadFont("DefconZero3DItalic-48.vlw");
-  textFont(font, 36);
-
   //CLASS INITIALIZE
   speedSlider = new ControlP5(this);
   speedSlider.addSlider("SonarSpeed_MHz", 0.5, 2.5, 1, 400, 525, 275, 30)
@@ -50,11 +43,13 @@ float Speed=1;
 
 void draw() {
   //println(windowCoordinates);
+  
   println(frameRate);
   windowCoordinates = Overlay();//Overlay Method passes back float array containing coordinates of window 
   sonar(windowCoordinates);
   Overlay();
   buttons(windowCoordinates);
+  Header(windowCoordinates);
 
   stroke(255, 0, 0);
   

@@ -4,10 +4,7 @@ void buttons(float[] x) {
   color BattleLEDOFF = color(125, 0, 0);
   color BattleLEDON = color(255, 0, 0);
 
-  //HEADER "SONAR-DEFENCE-SYSTEM"
-  fill(255);
-  String Header = "SONAR_DEFENCE_SYSTEM";
-  text(Header, x[5]-200, 50);
+
 
   //LED's
   //textFont(font1);

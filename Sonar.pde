@@ -1,6 +1,8 @@
 void sonar(float[] x) {//FUNCTION TAKES IN FLOAT ARRAY CONTAINING WINDOW COORDINATES
   background(0);
-
+  PFont font1;
+  font1 = createFont("Georgia", 8);
+  textFont(font1, 12);
   pushMatrix();
                                                                                              //GRID
   translate(x[0]-x[2]/2, x[1]-x[3]/2+5); 
@@ -70,7 +72,8 @@ println("lowesty =" , lowestY);
     stroke(255, 0, 0);
     if( table.getInt(i, "Alive") ==1 ){
     ellipse(mapX, mapY, 10, 10);
-    //text(shipName, mapX,mapY);
+    stroke(255);
+    text(shipName, mapX+10,mapY+5);
     }
   }
   popMatrix();
