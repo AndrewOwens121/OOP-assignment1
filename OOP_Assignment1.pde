@@ -5,8 +5,8 @@ import controlP5.*;
 ControlP5 speedSlider;
 
 //ARRAYLIST DECLARATION
-//ArrayList<Ship> ship_arraylist = new ArrayList<Ship>();
-Table table;
+ArrayList<Ship> ship_arraylist = new ArrayList<Ship>();
+
 
 void setup() {
 
@@ -15,7 +15,7 @@ void setup() {
   size(800, 600);
 
   //ARRAYLIST INITIALIZE
-  //ship_arraylist = new ArrayList<Ship>();
+ ship_arraylist = new ArrayList<Ship>();
 
   //CLASS INITIALIZE
   speedSlider = new ControlP5(this);

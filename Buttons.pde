@@ -19,6 +19,7 @@ void buttons(float[] x) {
   //        then you must flip the Live switch before firing , target will die , small X animation will come over its location ,
   //        and alive toggle in csv file will die , 1=alive , 0= dead - 3 types of craft  ** fix missing screw , variable name change might have broke them -
   //add in scuff marks and tally marks around border for affect
+  //find fix for loading fonts in functions called in draw etc
 
   //LEFT COLUMN BUTTONS
 
