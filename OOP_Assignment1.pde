@@ -50,7 +50,7 @@ void draw() {
   Overlay();
   buttons(windowCoordinates);
   Header(windowCoordinates);
-
+  ship2();
   stroke(255, 0, 0);
   
   //WINDOW CENTERPOINT LINES

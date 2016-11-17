@@ -114,5 +114,4 @@ void sonar(float[] x) {//FUNCTION TAKES IN FLOAT ARRAY CONTAINING WINDOW COORDIN
     Speed= Speed+SonarSpeed_MHz;
   }//increments rotation/scanning speed
 
-  //}
 }

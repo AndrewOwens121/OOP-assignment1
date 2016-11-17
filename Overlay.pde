@@ -64,33 +64,6 @@ float[] Overlay() {
   line(width-rCol/2-8, height-rCol/2-8,width-rCol/2+8, height-rCol/2+8);//bottom right
   line(lCol*0.35-8, height-rCol/2-8,lCol*0.35+8, height-rCol/2+8);//bottom left
   line(lCol*0.35-8, rCol/2-8,lCol*0.35+8, rCol/2+8);//top left
-  pushMatrix();
-  translate(90,100);
-  stroke(255, 255, 0);
-  noFill();
-  beginShape();
-  vertex(5, 5);
-  vertex(190, 20);
-  vertex(240, 90);
-  vertex(140, 110);
-  vertex(5, 5);
-  vertex(155, 40);
-  vertex(240, 90);
-  vertex(155, 40);
-  vertex(190, 20);
-  vertex(155, 40);
-  vertex(140, 110);
-  //fin
-  vertex(54, 42);
-  vertex(28, 36);
-  vertex(5, 5);
-  //speedStripes
-  stroke(255, 255, 0, 100);
-  vertex(151, 58);
-  vertex(5, 5);
-  vertex(144, 85);
-  endShape();
-  popMatrix();
   
   return windowCo;
 }
