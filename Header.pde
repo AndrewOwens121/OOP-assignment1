@@ -1,4 +1,4 @@
-void Header(float[] x) {
+void Header() {
   PFont font;
   font = loadFont("DefconZero3DItalic-48.vlw");
   textFont(font, 36);

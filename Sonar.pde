@@ -14,7 +14,6 @@ void sonar(float[] x) {//FUNCTION TAKES IN FLOAT ARRAY CONTAINING WINDOW COORDIN
     line(i, 0, i, 600);//verical grid lines
   }
 popMatrix();
- //ellipse(0,0,50,50);
 
   float x1;
   float y1;

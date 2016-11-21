@@ -31,7 +31,7 @@ int bCount=7;//number of Buttons
 int spacing = height/bCount-(bCount/10);
 float linewidth=0;
 float line=0;
-
+int shipCalled;
 float SonarSpeed_MHz=1;
 float Speed=1;
 boolean[] toggled = new boolean[7];
@@ -42,11 +42,10 @@ void draw() {
   windowCoordinates = Overlay();//Overlay Method passes back float array containing coordinates of window 
   sonar(windowCoordinates);
   Overlay();
-  buttons(windowCoordinates);
-  Header(windowCoordinates);
+  Header();
   ShipData();
   stroke(255, 0, 0);
   
-  //println("X:", mouseX);
-  //println("Y:", mouseY);
+  println("X:", mouseX);
+  println("Y:", mouseY);
 }//end Draw()

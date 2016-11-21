@@ -1,6 +1,5 @@
 void ShipData() {
   //call ship sketches in this function based on csv value
-  int shipCalled=0;
   for (int i=0; i<toggled.length; i++)
   {
     if (toggled[i] == true)
@@ -9,7 +8,7 @@ void ShipData() {
     }
   }
 
-  if (shipCalled != 0) {
+  if (shipCalled != 0 && ship_arraylist.get(shipCalled).Alive ==1) {
     //calls ship sketch
     if (ship_arraylist.get(shipCalled).ShipType==1) {
       ship1();

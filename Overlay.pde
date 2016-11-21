@@ -63,6 +63,41 @@ float[] Overlay() {
   line(width-rCol/2-8, height-rCol/2-8,width-rCol/2+8, height-rCol/2+8);//bottom right
   line(lCol*0.35-8, height-rCol/2-8,lCol*0.35+8, height-rCol/2+8);//bottom left
   line(lCol*0.35-8, rCol/2-8,lCol*0.35+8, rCol/2+8);//top left
+  //ENGAGE TARGET BUTTON
+  stroke(255,0,0);
+  fill(255,0,0,70);
+  ellipse(220,450,85,85);
+  stroke(255);
+  fill(255);
+  text("Engage Target",202,432,55,55);
+  //RESET BUTTON
+  fill(75);
   
+  //BUTTONS
+  color BattleLEDOFF = color(125, 0, 0);
+  color BattleLEDON = color(255, 0, 0);
+
+  //LED's
+  //textFont(font1);
+  //text("Battle Ready", width-x[7]/2, height/4);
+  stroke(20,20,20,120);
+  fill(BattleLEDON);
+  ellipse(width-windowCo[7]/2, height/4, 20, 20);//top right
+  //CABIN PRESSURE
+  fill(BattleLEDOFF);
+  ellipse(width-windowCo[7]/2, (height/4)*2, 20, 20);//top right
+
+  //LEFT COLUMN BUTTONS
+  int spacing = height/bCount-(bCount/10);
+  int rr=5;//rectRadius - how curved the buttons edges are
+  fill(75);
+  noStroke();
+  for (int i=0; i<bCount; i++) {
+    rect(5, 5+i*spacing, spacing-5, spacing-5, rr, rr, rr, rr);
+  }
+  stroke(255);
+  fill(255);
+  text("Reset",30,560);
+  fill(75);
   return windowCo;
 }
