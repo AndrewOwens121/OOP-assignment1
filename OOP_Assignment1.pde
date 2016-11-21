@@ -43,8 +43,9 @@ float Speed=1;
 
 void draw() {
   //println(windowCoordinates);
+
   
-  println(frameRate);
+  //println(frameRate);
   windowCoordinates = Overlay();//Overlay Method passes back float array containing coordinates of window 
   sonar(windowCoordinates);
   Overlay();
@@ -52,6 +53,8 @@ void draw() {
   Header(windowCoordinates);
   ship2();
   stroke(255, 0, 0);
+      println("X:", mouseX);
+  println("Y:", mouseY);
   
   //WINDOW CENTERPOINT LINES
   //line(windowCoordinates[0],0,windowCoordinates[0],height);
