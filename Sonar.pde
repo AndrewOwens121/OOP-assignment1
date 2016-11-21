@@ -28,15 +28,15 @@ popMatrix();
     if(ship_arraylist.get(i).Alive ==1 ){
     ellipse(x1, y1, 10, 10);
     stroke(255);
-    println(x1,y1);
-    text(shipName, x1+10,y1+5);
+    //println(x1,y1);
+    //text(shipName, x1+10,y1+5);
     }
   }
   //MOVE ORIGIN TO CENTER OF WINDOW AND ROTATE SONAR
   pushMatrix();
   translate(x[0], x[1]);
  
-  //rotate(radians(Speed));
+  rotate(radians(Speed));
   //SONAR DRAWING
   noStroke();
   fill(0, 255, 255, 100);

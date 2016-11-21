@@ -10,28 +10,29 @@ class Ship {
   int VesselSize;//length
   float Speed;//speed of ship
   String ShipName;
+  int Health;
 
   float lowestX=0;//variable for holding the lowest x value
   float lowestY=0;//varable for holding the lowest y value
   float highestX=0;//variable for holding the highest x value
   float highestY=0;//varable for holding the highest y value
 
-
-
   Ship(String line) {
 
     String[] parts = line.split(",");
     ShipID = int(parts[0]);
     Alive = int(parts[1]);
+    CrewNO = int(parts[2]);
     ShipType = int(parts[3]);
     Pos = new PVector(//PVector to replace x,y pos
       float(parts[4]), 
       float(parts[5]));
     ScreenPos = new PVector(//Maps Pos to Radar window
-      map(Pos.x, -500, 500, 360, 740)
-      , map(Pos.y, -500, 500, 90, 480));
+      map(float(parts[4]), -500, 500, 360, 740)
+      , map(float(parts[5]), -500, 500, 90, 480));
+    VesselSize= int(parts[6]);
+    Speed = int(parts[7]);
     ShipName = parts[8];
-  }// end gdp
-
-  
+    Health = int(parts[9]);
+  }// 
 }

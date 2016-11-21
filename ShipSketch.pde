@@ -1,6 +1,6 @@
 void ship1() {
   pushMatrix();
-  translate(110, 80);
+  translate(105, 80);
   stroke(255, 255, 0,150);
   noFill();
   
