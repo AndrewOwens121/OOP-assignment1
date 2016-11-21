@@ -26,12 +26,10 @@ class Ship {
     ShipType = int(parts[3]);
     Pos = new PVector(//PVector to replace x,y pos
       float(parts[4]), 
-      float(parts[5]) 
-      );
-    ScreenPos = new PVector(
+      float(parts[5]));
+    ScreenPos = new PVector(//Maps Pos to Radar window
       map(Pos.x, -500, 500, 360, 740)
-      , map(Pos.y, -500, 500, 90, 480)
-      );
+      , map(Pos.y, -500, 500, 90, 480));
     ShipName = parts[8];
   }// end gdp
 

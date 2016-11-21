@@ -24,17 +24,14 @@ popMatrix();
     x1=ship_arraylist.get(i).ScreenPos.x;
     y1=ship_arraylist.get(i).ScreenPos.y;
     String shipName=ship_arraylist.get(i).ShipName;
-    //mapX=map(x1, lowestX, highestX, 0, x[2]);
-    //mapY=map(y1, lowestY, highestY, 0, x[3]);
     stroke(255, 0, 0);
-    //if(ship_arraylist.get(i).Alive ==1 ){
+    if(ship_arraylist.get(i).Alive ==1 ){
     ellipse(x1, y1, 10, 10);
     stroke(255);
     println(x1,y1);
     text(shipName, x1+10,y1+5);
-   // }
+    }
   }
-
   //MOVE ORIGIN TO CENTER OF WINDOW AND ROTATE SONAR
   pushMatrix();
   translate(x[0], x[1]);
@@ -43,9 +40,7 @@ popMatrix();
   //SONAR DRAWING
   noStroke();
   fill(0, 255, 255, 100);
-//test
- //ellipse(0,0,50,50);
- 
+
   beginShape();
   vertex(-10, 0);
   vertex(10, 0);
@@ -70,7 +65,6 @@ popMatrix();
     line=0;
     linewidth=0;
   }
-
   //resets origin for other drawings
   popMatrix();
 

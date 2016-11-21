@@ -11,10 +11,9 @@ float[] Overlay() {
   float centerY=((height-(tRow+bRow))/2)+tRow;
   float windowWidth=width-(lCol+rCol);
   float windowHeight=height-(tRow+bRow);
-  //println(centerX);  
+  
   //VARIABLE FOR SLIDER COORDINATES
   float sliderX = centerX-(windowWidth/2);
-  //println(sliderX);
 
   //ARRAY TO HOLD CENTER/SIZE VARIABLES TO BE PASSED BACK
   float[] windowCo= new float[9]; 
