@@ -23,7 +23,7 @@ popMatrix();
     x1=ship_arraylist.get(i).ScreenPos.x;
     y1=ship_arraylist.get(i).ScreenPos.y;
     String shipName=ship_arraylist.get(i).ShipName;
-    if(Speed>ship_arraylist.get(i).CompleteAngle-18.5 && Speed<ship_arraylist.get(i).CompleteAngle+18.5)
+    if(Speed>ship_arraylist.get(i).CompleteAngle-18.5 && Speed<ship_arraylist.get(i).CompleteAngle+18.5 &&ship_arraylist.get(i).Alive==1)
     {
       stroke(255, 0, 0);
       text("Dist:" + int(ship_arraylist.get(i).Distance), x1+10,y1+5);
