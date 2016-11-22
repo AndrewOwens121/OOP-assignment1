@@ -23,7 +23,14 @@ popMatrix();
     x1=ship_arraylist.get(i).ScreenPos.x;
     y1=ship_arraylist.get(i).ScreenPos.y;
     String shipName=ship_arraylist.get(i).ShipName;
-    stroke(255, 0, 0);
+    if(Speed>ship_arraylist.get(i).CompleteAngle-18.5 && Speed<ship_arraylist.get(i).CompleteAngle+18.5)
+    {
+      stroke(255, 0, 0);
+      text("Dist:" + int(ship_arraylist.get(i).Distance), x1+10,y1+5);
+    }
+    else{
+    stroke(255, 0, 0,60);
+    }
     if(ship_arraylist.get(i).Alive ==1 ){
     ellipse(x1, y1, 10, 10);
     stroke(255);
@@ -35,7 +42,7 @@ popMatrix();
   pushMatrix();
   translate(x[0], x[1]);
  
-  //rotate(radians(Speed));
+  rotate(radians(Speed));
   //SONAR DRAWING
   noStroke();
   fill(0, 255, 255, 100);
@@ -66,10 +73,14 @@ popMatrix();
   }
   //resets origin for other drawings
   popMatrix();
-
+println(Speed);
+if(Speed>=359){
+ Speed=0; 
+}
 
   if (SonarSpeed_MHz >= 359) {
     SonarSpeed_MHz=0;
+    
   } else {
     Speed= Speed+SonarSpeed_MHz;
   }//increments rotation/scanning speed
