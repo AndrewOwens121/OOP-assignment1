@@ -35,7 +35,7 @@ popMatrix();
   pushMatrix();
   translate(x[0], x[1]);
  
-  rotate(radians(Speed));
+  //rotate(radians(Speed));
   //SONAR DRAWING
   noStroke();
   fill(0, 255, 255, 100);

@@ -3,5 +3,5 @@ ShipID,Alive,CrewNO,ShipType,xPos,yPos,VesselSize,Speed,ShipName,Health
 2,1,30,2,-300,-300,150,2,Bravo,125
 3,1,15,1,-250,-50,105,1.9,Charlie,100
 4,1,55,3,300,225,175,1.5,Delta,150
-5,1,15,1,250,0,105,2.3,HughMungus,100
+5,1,15,1,250,-5,105,2.3,HughMungus,100
 6,1,30,2,-80,-450,150,2.5,Zebra,125

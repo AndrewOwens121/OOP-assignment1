@@ -11,12 +11,7 @@ class Ship {
   float Speed;//speed of ship
   String ShipName;
   int Health;
-
-  float lowestX=0;//variable for holding the lowest x value
-  float lowestY=0;//varable for holding the lowest y value
-  float highestX=0;//variable for holding the highest x value
-  float highestY=0;//varable for holding the highest y value
-
+  int Quadrant;
   Ship(String line) {
 
     String[] parts = line.split(",");
@@ -34,5 +29,18 @@ class Ship {
     Speed = int(parts[7]);
     ShipName = parts[8];
     Health = int(parts[9]);
-  }// 
+    //GETTING SHIP POSITION IN QUADRANTS FOR USE WITH RADAR
+    if (Pos.x>=0&&Pos.y<=0) {
+      Quadrant=0;
+    }
+    if (Pos.x>=0&&Pos.y>=0) {
+      Quadrant=1;
+    }
+    if (Pos.x<=0&&Pos.y>=0) {
+      Quadrant=2;
+    }
+    if (Pos.x<=0&&Pos.y<=0) {
+      Quadrant=3;
+    }
+  }//
 }

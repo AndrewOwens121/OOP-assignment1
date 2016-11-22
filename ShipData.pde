@@ -30,9 +30,8 @@ void ShipData() {
     text(("SHIP SPEED:"+ ship_arraylist.get(shipCalled).Speed) + "KNOTS", 115, 320);
     text(("CREW ONBOARD:"+ ship_arraylist.get(shipCalled).CrewNO), 115, 350);
     text(("HEALTH:"+ ship_arraylist.get(shipCalled).Health), 115, 380);
-
-
-
+    text(("QUADRANT:"+ ship_arraylist.get(shipCalled).Quadrant), 115, 410);
+    
 
     println(shipCalled);
   }
