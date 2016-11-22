@@ -12,6 +12,7 @@ class Ship {
   String ShipName;
   int Health;
   int Quadrant;
+  float CompleteAngle;
   Ship(String line) {
 
     String[] parts = line.split(",");
@@ -42,5 +43,15 @@ class Ship {
     if (Pos.x<=0&&Pos.y<=0) {
       Quadrant=3;
     }
-  }//
+    //GETTING ANGLE IN DEGREES OF POINT FROM RADAR
+    float hyp = sqrt(pow(abs(Pos.x), 2)+pow(abs(Pos.y), 2));
+    float opp = abs(Pos.y);
+    float QuadrantAngle = degrees(asin(opp/hyp));
+    if (Quadrant==0) {
+      CompleteAngle=90-QuadrantAngle;
+    } else
+    {
+      CompleteAngle=QuadrantAngle+ Quadrant*90;
+    }
+  }
 }
