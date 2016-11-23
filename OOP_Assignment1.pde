@@ -27,6 +27,7 @@ void setup() {
 }//end Setup()
 
 //VARIABLES
+int GameOver=0;//switches to 1 if ships reach radar without being killed
 int bCount=7;//number of Buttons
 int spacing = height/bCount-(bCount/10);
 float linewidth=0;

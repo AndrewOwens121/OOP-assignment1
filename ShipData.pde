@@ -21,7 +21,7 @@ void ShipData() {
     }
   
     PFont font1;
-    font1 = createFont("Georgia", 8);
+    font1 = createFont("Franklin Gothic Medium Cond", 8);
     textFont(font1, 20);
     //shipName
     text(("SHIP ID:"+ ship_arraylist.get(shipCalled).ShipID), 115, 230);

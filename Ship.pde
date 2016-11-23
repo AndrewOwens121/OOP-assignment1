@@ -14,6 +14,10 @@ class Ship {
   int Quadrant;
   float Distance;
   float CompleteAngle;
+  float Xinc;
+  float Yinc;
+  int i;
+
   Ship(String line) {
 
     String[] parts = line.split(",");
@@ -55,5 +59,10 @@ class Ship {
     {
       CompleteAngle=QuadrantAngle+ Quadrant*90;
     }
+    //GETTING SIZE OF X AND Y INCREMENTS TO MAKE SHIPS COME TOWARDS RADAR
+    Xinc=abs(Pos.x)/pow(Speed, 5);
+    Yinc=abs(Pos.y)/pow(Speed, 5);
+    //MOVING SHIP POSITION TOWARDS RADAR
+    
   }
 }
