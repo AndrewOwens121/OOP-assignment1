@@ -46,7 +46,7 @@ void draw() {
   Header();
   ShipData();
   stroke(255, 0, 0);
-  
-  println("X:", mouseX);
-  println("Y:", mouseY);
+  println(shipCalled);
+  //println("X:", mouseX);
+  //println("Y:", mouseY);
 }//end Draw()

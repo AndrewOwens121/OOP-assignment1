@@ -22,6 +22,9 @@ void mousePressed()
         ship_arraylist.get(i).Alive=1;
         ship_arraylist.get(i).ScreenPos.x=ship_arraylist.get(i).ScreenPosSET.x;
         ship_arraylist.get(i).ScreenPos.y=ship_arraylist.get(i).ScreenPosSET.y;
+         for (int j=0; j<toggled.length; j++) {
+        toggled[j]=false;
+      }
         shipCalled=0;
       }
     }

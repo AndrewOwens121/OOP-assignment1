@@ -49,8 +49,6 @@ void ShipData() {
      font1 = createFont("Franklin Gothic Medium Cond", 8);
      textFont(font1, 20);
    text("Choose Next Target!",145,140);
-   
-   
-   
+   gfx();   
  }
 }

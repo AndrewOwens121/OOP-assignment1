@@ -77,3 +77,24 @@ void ship3() {
 
   popMatrix();
 }
+void gfx(){
+  pushMatrix();
+  translate(90,150);
+  stroke(127,150);
+  noFill();
+  beginShape();
+  vertex(115,10);
+  vertex(200,55);
+  vertex(115,210);
+  vertex(30,55);
+  vertex(115,10);
+  vertex(105,50);
+  vertex(115,210);
+  vertex(105,50);
+  vertex(200,55);
+  vertex(105,50);
+  vertex(105,50);
+  vertex(30,55);
+  endShape();
+  popMatrix();
+}
