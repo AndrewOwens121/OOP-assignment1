@@ -79,7 +79,7 @@ void ship3() {
 }
 void gfx(){
   pushMatrix();
-  translate(90,150);
+  translate(105,150);
   stroke(127,150);
   noFill();
   beginShape();

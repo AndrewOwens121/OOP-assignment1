@@ -10,7 +10,6 @@ void mousePressed()
         toggled[j]=false;
       }
       toggled[i] = true;
-      //ship_arraylist.get(i).Health+=-25;
     }
 
     //RESETBUTTON
@@ -29,6 +28,7 @@ void mousePressed()
       }
     }
   }
+  //ENGAGE TARGET
   if (dist(mouseX, mouseY, 220, 450)<85) //set the correct node to toggled true
   {
     ship_arraylist.get(shipCalled).Health-=25;
@@ -36,5 +36,12 @@ void mousePressed()
     {
       ship_arraylist.get(shipCalled).Alive=0;
     }
+  }
+  
+  if (dist(mouseX, mouseY, 770, height/4)<20){
+    LED[0]=!LED[0];  
+  }
+    if (dist(mouseX, mouseY, 770, height/2)<20){
+    LED[1]=!LED[1];  
   }
 }

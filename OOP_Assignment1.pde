@@ -36,6 +36,7 @@ int shipCalled;
 float SonarSpeed_MHz=1;
 float Speed=1;
 boolean[] toggled = new boolean[7];
+boolean[] LED = new boolean[2];
 float[] windowCoordinates;
 
 void draw() {
@@ -46,7 +47,8 @@ void draw() {
   Header();
   ShipData();
   stroke(255, 0, 0);
-  println(shipCalled);
+  println(LED[0]);
+  //println(shipCalled);
   //println("X:", mouseX);
   //println("Y:", mouseY);
 }//end Draw()

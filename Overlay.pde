@@ -11,7 +11,7 @@ float[] Overlay() {
   float centerY=((height-(tRow+bRow))/2)+tRow;
   float windowWidth=width-(lCol+rCol);
   float windowHeight=height-(tRow+bRow);
-  
+
   //VARIABLE FOR SLIDER COORDINATES
   float sliderX = centerX-(windowWidth/2);
 
@@ -35,7 +35,7 @@ float[] Overlay() {
   rect(width-rCol, tRow, rCol, height-(bRow+tRow));//right Column
   rect(lCol, height-bRow, width-(lCol), bRow);//bottom Row
 
-  
+
   //WINDOW BORDER
   stroke(0);
   strokeWeight(5);
@@ -45,48 +45,57 @@ float[] Overlay() {
 
   //SCREWS
   noStroke();
-  fill(85,85,85,85);
+  fill(85, 85, 85, 85);
   ellipse(width-rCol/2, rCol/2, 35, 35);//top right
   ellipse(width-rCol/2, height-rCol/2, 35, 35);//bottom right
   ellipse(lCol*0.35, height-rCol/2, 35, 35);//bottom left
   ellipse(lCol*0.35, rCol/2, 35, 35);//top left
 
-  fill(70,70,70);
+  fill(70, 70, 70);
   ellipse(width-rCol/2, rCol/2, 30, 30);//top right
   ellipse(width-rCol/2, height-rCol/2, 30, 30);//bottom right
   ellipse(lCol*0.35, height-rCol/2, 30, 30);//bottom left
   ellipse(lCol*0.35, rCol/2, 30, 30);//top left
- 
-  stroke(20,20,20,120);
+
+  stroke(20, 20, 20, 120);
   strokeWeight(3);
-  line(width-rCol/2-8, rCol/2-8,width-rCol/2+8, rCol/2+8);//top right
-  line(width-rCol/2-8, height-rCol/2-8,width-rCol/2+8, height-rCol/2+8);//bottom right
-  line(lCol*0.35-8, height-rCol/2-8,lCol*0.35+8, height-rCol/2+8);//bottom left
-  line(lCol*0.35-8, rCol/2-8,lCol*0.35+8, rCol/2+8);//top left
+  line(width-rCol/2-8, rCol/2-8, width-rCol/2+8, rCol/2+8);//top right
+  line(width-rCol/2-8, height-rCol/2-8, width-rCol/2+8, height-rCol/2+8);//bottom right
+  line(lCol*0.35-8, height-rCol/2-8, lCol*0.35+8, height-rCol/2+8);//bottom left
+  line(lCol*0.35-8, rCol/2-8, lCol*0.35+8, rCol/2+8);//top left
   //ENGAGE TARGET BUTTON
-  stroke(255,0,0);
-  fill(255,0,0,70);
-  ellipse(220,450,85,85);
+  stroke(255, 0, 0);
+  fill(255, 0, 0, 70);
+  ellipse(220, 450, 85, 85);
   stroke(255);
   fill(255);
-  text("Engage Target",202,432,55,55);
-  //RESET BUTTON
-  fill(75);
-  
+  text("Engage Target", 202, 432, 55, 55);  
   //BUTTONS
   color BattleLEDOFF = color(125, 0, 0);
   color BattleLEDON = color(255, 0, 0);
 
   //LED's
-  //textFont(font1);
-  //text("Battle Ready", width-x[7]/2, height/4);
-  stroke(20,20,20,120);
-  fill(BattleLEDON);
-  ellipse(width-windowCo[7]/2, height/4, 20, 20);//top right
-  //CABIN PRESSURE
-  fill(BattleLEDOFF);
-  ellipse(width-windowCo[7]/2, (height/4)*2, 20, 20);//top right
+  stroke(20, 20, 20, 120);
 
+  if (LED[0]==true) {
+    fill(BattleLEDON);
+    ellipse(width-windowCo[7]/2, height/4, 20, 20);//top right
+  }
+  println(width-windowCo[7]/2);
+  if (LED[0]==false) {
+    fill(BattleLEDOFF);
+    ellipse(width-windowCo[7]/2, height/4, 20, 20);//top right}
+  }
+  
+   if (LED[1]==true) {
+    fill(BattleLEDON);
+    ellipse(width-windowCo[7]/2, (height/4)*2, 20, 20);//bottom right
+  }
+
+  if (LED[1]==false) {
+    fill(BattleLEDOFF);
+    ellipse(width-windowCo[7]/2, (height/4)*2, 20, 20);//bottom right
+  }
   //LEFT COLUMN BUTTONS
   int spacing = height/bCount-(bCount/10);
   int rr=5;//rectRadius - how curved the buttons edges are
@@ -97,7 +106,7 @@ float[] Overlay() {
   }
   stroke(255);
   fill(255);
-  text("Reset",30,560);
+  text("Reset", 30, 560);
   fill(75);
   return windowCo;
 }

@@ -28,7 +28,19 @@ void ShipData() {
     text(("VESSEL SIZE:"+ ship_arraylist.get(shipCalled).VesselSize), 115, 290);
     text(("SHIP SPEED:"+ ship_arraylist.get(shipCalled).Speed) + "KNOTS", 115, 320);
     text(("CREW ONBOARD:"+ ship_arraylist.get(shipCalled).CrewNO), 115, 350);
+    
+    if(ship_arraylist.get(shipCalled).Health>75){//GREEN
+      fill(0,255,0);
     text(("HEALTH:"+ ship_arraylist.get(shipCalled).Health), 115, 380);
+    }
+    if(ship_arraylist.get(shipCalled).Health<=75){//YELLOW
+      fill(255,255,0);
+    text(("HEALTH:"+ ship_arraylist.get(shipCalled).Health), 115, 380);
+    }
+    if(ship_arraylist.get(shipCalled).Health<50){//RED
+      fill(255,0,0);
+    text(("HEALTH:"+ ship_arraylist.get(shipCalled).Health), 115, 380);
+    }
   }
   if(shipCalled==0){
      //blank tutorial low alpha 
