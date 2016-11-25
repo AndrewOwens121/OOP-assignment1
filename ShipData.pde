@@ -18,8 +18,7 @@ void ShipData() {
     }
     if (ship_arraylist.get(shipCalled).ShipType==3) {
       ship3();
-    }
-  
+    }  
     PFont font1;
     font1 = createFont("Franklin Gothic Medium Cond", 8);
     textFont(font1, 20);
@@ -31,4 +30,27 @@ void ShipData() {
     text(("CREW ONBOARD:"+ ship_arraylist.get(shipCalled).CrewNO), 115, 350);
     text(("HEALTH:"+ ship_arraylist.get(shipCalled).Health), 115, 380);
   }
+  if(shipCalled==0){
+     //blank tutorial low alpha 
+     PFont font1;
+     fill(255,255,255,100);
+     font1 = createFont("Franklin Gothic Medium Cond", 8);
+    textFont(font1, 24);
+     text("WELCOME TO",155,120);
+     text("SONAR DEFENCE SYSTEM",105,140);
+     textFont(font1, 20);
+     text("FIRST : target a ship by clicking its location on the sonar",95,160,240,60);
+     text("SECOND : Attack the ship by clicking engage target button",95,220,240,60);
+     text("THIRD : KILL all ships before they reach the radar",95,280,240,60); 
+ }
+ if(shipCalled!=0&&ship_arraylist.get(shipCalled).Alive==0){
+     PFont font1;
+     fill(255,255,255,100);
+     font1 = createFont("Franklin Gothic Medium Cond", 8);
+     textFont(font1, 20);
+   text("Choose Next Target!",145,140);
+   
+   
+   
+ }
 }

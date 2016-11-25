@@ -27,17 +27,20 @@ void sonar(float[] x) {
       if (Speed>ship_arraylist.get(i).CompleteAngle-18.5 && Speed<ship_arraylist.get(i).CompleteAngle+18.5 &&ship_arraylist.get(i).Alive==1)
       {
         stroke(255, 0, 0);
-        text("Dist:" + int(ship_arraylist.get(i).Distance), x1+10, y1+5);
+        //CALCULATE DISTANCE BETWEEN SHIP AND RADAR
+        int dist=int(dist(550,280,ship_arraylist.get(i).ScreenPos.x,ship_arraylist.get(i).ScreenPos.y));
+        text("Dist:" + dist+ "Meters", x1+10, y1+5);
         ellipse(x1, y1, 10, 10);
         stroke(255,0,0);
       } else {
         stroke(255, 0, 0, 60);
+
       }
       if (ship_arraylist.get(i).Alive ==1 ) {
         ellipse(x1, y1, 10, 10);
       }
       //Code for ships moving towards Sonar
-      if (frameCount%60==30) {
+      if (frameCount%60==0 && dist(ship_arraylist.get(i).ScreenPos.x,ship_arraylist.get(i).ScreenPos.y,550,280)>=20) {
       if (ship_arraylist.get(i).Quadrant==0) {
         ship_arraylist.get(i).ScreenPos.x-=ship_arraylist.get(i).Xinc;
         ship_arraylist.get(i).ScreenPos.y+=ship_arraylist.get(i).Yinc;
@@ -54,6 +57,9 @@ void sonar(float[] x) {
         ship_arraylist.get(i).ScreenPos.x+=ship_arraylist.get(i).Xinc;
         ship_arraylist.get(i).ScreenPos.y+=ship_arraylist.get(i).Yinc;
       }
+    }else if(frameCount%60==0 && dist(ship_arraylist.get(i).ScreenPos.x,ship_arraylist.get(i).ScreenPos.y,550,280)<=20){
+             ship_arraylist.get(i).ScreenPos.x=ship_arraylist.get(i).ScreenPosSET.x;
+        ship_arraylist.get(i).ScreenPos.y=ship_arraylist.get(i).ScreenPosSET.y; 
     }
     }
     //MOVE ORIGIN TO CENTER OF WINDOW AND ROTATE SONAR

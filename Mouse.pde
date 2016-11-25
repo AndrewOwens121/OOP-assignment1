@@ -11,8 +11,7 @@ void mousePressed()
       }
       toggled[i] = true;
       //ship_arraylist.get(i).Health+=-25;
-    } 
-    //ENGAGE TARGET BUTTON
+    }
 
     //RESETBUTTON
     if (mouseX>5&&mouseX<85&&mouseY>515&&mouseY<595)
@@ -21,6 +20,8 @@ void mousePressed()
       {
         ship_arraylist.get(i).Health=100;
         ship_arraylist.get(i).Alive=1;
+        ship_arraylist.get(i).ScreenPos.x=ship_arraylist.get(i).ScreenPosSET.x;
+        ship_arraylist.get(i).ScreenPos.y=ship_arraylist.get(i).ScreenPosSET.y;
         shipCalled=0;
       }
     }

@@ -47,6 +47,6 @@ void draw() {
   ShipData();
   stroke(255, 0, 0);
   
-  //println("X:", mouseX);
-  //println("Y:", mouseY);
+  println("X:", mouseX);
+  println("Y:", mouseY);
 }//end Draw()
