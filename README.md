@@ -47,7 +47,7 @@ popMatrix();
 each ship was in relation to the sonar , then taking the width of the sonar beam into account I compared the variable used for rotate and the Ship's degree's and when they matched up , to change the stroke of the ship on the sonar
 to a lighter shade of red.Below I have added pictures of my rough work below,
 
-![alt tag](http://i.imgur.com/undefined.png)
+![alt tag](http://i.imgur.com/Go9DPel.png)
 
 4. Next I wanted to Display the distance between the ship on screen and the Sonar , I used trigonometry for this and although this is easily done using the built in dist() method , I had already done out the trigonometry while caluclating 
 degree for each ship so just used the hypotenuse as the distance.
