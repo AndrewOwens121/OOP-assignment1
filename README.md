@@ -4,10 +4,10 @@
 For my First OOP assignment I was given a task to create a UI for a Sci-fi movie device , 
 which had lots of animation and interactivity and should include 
 *Variables, loops, methods
-*Arrays & array lists
-*Objects, inheritance, polymorphism
-*The unit circle and trigonometry
-*pushMatrix, popMatrix, translate and rotate
+* Arrays & array lists
+* Objects, inheritance, polymorphism
+* The unit circle and trigonometry
+* pushMatrix, popMatrix, translate and rotate
 
 ###Variables, loops, methods
 I used Variable , loops and Methods thoughout my code to minimise hard-coding , and to make my code as efficient , readable , and Reusable as possible
