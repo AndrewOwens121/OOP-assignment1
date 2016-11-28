@@ -1,5 +1,6 @@
 # OOP-assignment1
 ##Student Number : C14363641 
+####Requires ConrolP5 library for processing to run.
 
 For my First OOP assignment I was given a task to create a UI for a Sci-fi movie device , 
 which had lots of animation and interactivity and should include 
@@ -28,11 +29,11 @@ I used these methods as the backbone of my sonar method and without these built-
 
 ##Feature
 The feature I am most proud of in this assignment is the Sonar and using the guidelines of the assignment to implement all of its functionality,
-as you can see below the only ships that light up on the Sonar , are those within the scope of the radar , I implemented this feature using co-ordinate geometry, trigonometry, and the Unit circle.
+as you can see below the only ships that light up on the Sonar , are those within the scope of the sonar , I implemented this feature using co-ordinate geometry, trigonometry, and the Unit circle.
 ![alt tag](http://i.imgur.com/PVuXyPz.png)
 
-1. First I began by drawing the sonar using vertex , then used pushMatrix, popMatrix, translate and rotate to move (translate) the radar to the window in the sketch , and rotate the shape using a variable which is
-incremented once per frame (rotate speed can be increased by user using the controlP5 librarys slider). This basically gave me a radar spinning around which looks good but had little functionality
+1. First I began by drawing the sonar using vertex , then used pushMatrix, popMatrix, translate and rotate to move (translate) the sonar to the window in the sketch , and rotate the shape using a variable which is
+incremented once per frame (rotate speed can be increased by user using the controlP5 librarys slider). This basically gave me a sonar spinning around which looks good but had little functionality
 ```
 pushMatrix();
     translate(x[0], x[1]);
@@ -56,7 +57,7 @@ degree for each ship so just used the hypotenuse as the distance.
 ```
 frameCount%60==0
 ```
-shown to us in a previous lab  to trigger changes every 60 frames (every second if running at 60fps), I also used trigonometry to determin the ship position change so that the ships are coming straight for the radar etc.
+shown to us in a previous lab  to trigger changes every 60 frames (every second if running at 60fps), I also used trigonometry to determin the ship position change so that the ships are coming straight for the sonar etc.
 I used the Quadrant system I set up to determine if pixels should be added or subracted to the ships x,y to achieve them going in the sonars direction.
 
 ##Screenshot's of My finished Assignment
@@ -64,7 +65,15 @@ I used the Quadrant system I set up to determine if pixels should be added or su
 ![alt tag](http://i.imgur.com/HfukiBk.png) 
 ![alt tag](http://i.imgur.com/PVuXyPz.png)
 ![alt tag](http://i.imgur.com/LN4jCpm.png)
+![alt tag](http://i.imgur.com/Rvpyutl.png)
 
 
 
 ##Youtube Demo
+[![SONAR DEFENCE SYSTEM](http://i.imgur.com/Rvpyutl.png)](https://youtu.be/FMfCZKvsZ24)
+
+##Overview of Assignment
+I really enjoyed working on this assignment and believe I have learned a lot while working out problems and errors, I am very proud of how my assignment turned out , but there are multiple things that if I could do it again I would change/ add,
+* FPS: there were a few fps issue , the sonar and the ships moving all work off the framerate , and thus higher frame rate the game runs quicker etc , In any future projects I make I will make sure to implement features which try make everything run at the same 
+speed on different systems as the game runs slower on my pc with an amd cpu and gtx 960 gpu , but runs noticibly faster on my laptop with an i5 , so in future assignments i wish to make my code more efficient and cap framerate
+

@@ -7,10 +7,8 @@ ControlP5 speedSlider;
 //ARRAYLIST DECLARATION
 ArrayList<Ship> ship_arraylist = new ArrayList<Ship>();
 
-
 void setup() {
-
-  frameRate(60);
+  frameRate(30);
   background(0);
   size(800, 600);
 
