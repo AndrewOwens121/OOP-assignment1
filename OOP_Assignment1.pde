@@ -46,9 +46,5 @@ void draw() {
   Overlay();
   Header();
   ShipData();
-  stroke(255, 0, 0);
-  println(LED[0]);
-  //println(shipCalled);
-  //println("X:", mouseX);
-  //println("Y:", mouseY);
+  //stroke(255, 0, 0);
 }//end Draw()

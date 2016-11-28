@@ -81,7 +81,7 @@ float[] Overlay() {
     fill(BattleLEDON);
     ellipse(width-windowCo[7]/2, height/4, 20, 20);//top right
   }
-  println(width-windowCo[7]/2);
+  //println(width-windowCo[7]/2);
   if (LED[0]==false) {
     fill(BattleLEDOFF);
     ellipse(width-windowCo[7]/2, height/4, 20, 20);//top right}

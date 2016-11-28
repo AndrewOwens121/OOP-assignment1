@@ -66,4 +66,8 @@ class Ship {
     Xinc=abs(Pos.x)/pow(Speed, 5);
     Yinc=abs(Pos.y)/pow(Speed, 5);
   }
+  
+  void name(){
+   println(ShipName); 
+  }
 }
