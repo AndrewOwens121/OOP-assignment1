@@ -22,6 +22,7 @@ void setup() {
   speedSlider.addSlider("SonarSpeed_MHz", 0.5, 2.5, 1, 400, 525, 275, 30)
     .setColorForeground(color(0, 255, 255, 55))
     .setColorBackground(color(80, 125, 225, 55));
+
   //LOAD DATA 
   loadData();
 }//end Setup()
@@ -40,11 +41,9 @@ boolean[] LED = new boolean[2];
 float[] windowCoordinates;
 
 void draw() {
-  //println(frameRate);
   windowCoordinates = Overlay();//Overlay Method passes back float array containing coordinates of window 
   sonar(windowCoordinates);
   Overlay();
   Header();
   ShipData();
-  //stroke(255, 0, 0);
 }//end Draw()

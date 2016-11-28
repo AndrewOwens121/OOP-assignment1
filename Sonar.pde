@@ -98,7 +98,6 @@ void sonar(float[] x) {
     }
     //resets origin for other drawings
     popMatrix();
-    //println(Speed);
     if (Speed>=359) {
       Speed=0;
     }

@@ -1,5 +1,4 @@
 class Ship {
-
   //VARIABLES FOR SHIPDATA CSV FILE
   int ShipID;//removed ? from name as causing errors
   int Alive;//1=Alive 0=Dead
@@ -65,9 +64,5 @@ class Ship {
     //GETTING SIZE OF X AND Y INCREMENTS TO MAKE SHIPS COME TOWARDS RADAR
     Xinc=abs(Pos.x)/pow(Speed, 5);
     Yinc=abs(Pos.y)/pow(Speed, 5);
-  }
-  
-  void name(){
-   println(ShipName); 
   }
 }

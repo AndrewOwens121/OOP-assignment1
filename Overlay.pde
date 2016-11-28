@@ -70,11 +70,11 @@ float[] Overlay() {
   stroke(255);
   fill(255);
   text("Engage Target", 202, 432, 55, 55);  
-  //BUTTONS
-  color BattleLEDOFF = color(125, 0, 0);
-  color BattleLEDON = color(255, 0, 0);
+
 
   //LED's
+  color BattleLEDOFF = color(125, 0, 0);
+  color BattleLEDON = color(255, 0, 0);
   stroke(20, 20, 20, 120);
 
   if (LED[0]==true) {
@@ -86,8 +86,8 @@ float[] Overlay() {
     fill(BattleLEDOFF);
     ellipse(width-windowCo[7]/2, height/4, 20, 20);//top right}
   }
-  
-   if (LED[1]==true) {
+
+  if (LED[1]==true) {
     fill(BattleLEDON);
     ellipse(width-windowCo[7]/2, (height/4)*2, 20, 20);//bottom right
   }

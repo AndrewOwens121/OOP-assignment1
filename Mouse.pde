@@ -1,7 +1,6 @@
-
 void mousePressed() 
 {
-
+  //TARGET SHIP
   for (int i=0; i<ship_arraylist.size(); i++)
   {
     if ((mouseX>ship_arraylist.get(i).ScreenPos.x-8) && (mouseX<ship_arraylist.get(i).ScreenPos.x+8) && (mouseY>ship_arraylist.get(i).ScreenPos.y-8) && (mouseY<ship_arraylist.get(i).ScreenPos.y+8)) //set the correct node to toggled true
@@ -21,9 +20,9 @@ void mousePressed()
         ship_arraylist.get(i).Alive=1;
         ship_arraylist.get(i).ScreenPos.x=ship_arraylist.get(i).ScreenPosSET.x;
         ship_arraylist.get(i).ScreenPos.y=ship_arraylist.get(i).ScreenPosSET.y;
-         for (int j=0; j<toggled.length; j++) {
-        toggled[j]=false;
-      }
+        for (int j=0; j<toggled.length; j++) {
+          toggled[j]=false;
+        }
         shipCalled=0;
       }
     }
@@ -37,11 +36,11 @@ void mousePressed()
       ship_arraylist.get(shipCalled).Alive=0;
     }
   }
-  
-  if (dist(mouseX, mouseY, 770, height/4)<20){
-    LED[0]=!LED[0];  
+  //LED's
+  if (dist(mouseX, mouseY, 770, height/4)<20) {
+    LED[0]=!LED[0];
   }
-    if (dist(mouseX, mouseY, 770, height/2)<20){
-    LED[1]=!LED[1];  
+  if (dist(mouseX, mouseY, 770, height/2)<20) {
+    LED[1]=!LED[1];
   }
 }
